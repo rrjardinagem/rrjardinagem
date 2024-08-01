@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="https://rrjardinagem.github.io/rrjardinagem/index.css">
     <title>RR JARDINAGEM</title>
 </head>
 <script>
@@ -22,9 +22,9 @@
 <body>
 
     <header class="sticky top-0 z-10 text-right flex flex-row w-full bg-primary-blue pl-4 pr-4 pt-4 pb-2">
-        <img  src="/images/logo-white.png" alt="baner" class="responsive-img"/>
+        <img  src="https://rrjardinagem.github.io/rrjardinagem/images/logo-white.png" alt="baner" class="responsive-img"/>
         <div class="flex flex-col md:flex-row ml-auto gap-4 md:gap-8">
-            <a href="/index.html" class="whitespace-nowrap mt-auto text-sx text-white ml-auto hover:opacity-50">Home</a>
+            <a href="https://rrjardinagem.github.io/rrjardinagem/index.html" class="whitespace-nowrap mt-auto text-sx text-white ml-auto hover:opacity-50">Home</a>
             <div class="flex flex-col md:flex-row ml-auto gap-4 ">
                 <!-- <a href="/login" class="whitespace-nowrap mt-auto text-sx font-bold text-[#075E54] pt-1 pb-1 pl-4 pr-4 text-center rounded-md ml-auto bg-white hover:opacity-80">Já sou cliente</a> -->
                 <a class="whitespace-nowrap flex justify-center items-center gap-2 ml-auto mt-auto hover:opacity-50" href="https://api.whatsapp.com/send/?phone=5511969803152&text=ola">
@@ -312,7 +312,7 @@
     <footer class="bg-white w-full flex flex-col md:flex-row pb-8 md:gap-20 md:mt-8">
         <div class="flex flex-col md:w-[50%] md:justify-items-end p-2">
             <div class="w-fit mr-auto ml-auto md:mr-0 md:ml-auto flex flex-col md:mt-auto md:mb-auto">
-                <img width="300"  src="/images/logo3.png" alt="baner" class="mr-auto" />
+                <img width="300"  src="https://rrjardinagem.github.io/rrjardinagem/images/logo3.png" alt="baner" class="mr-auto" />
             </div>
         </div>
         <div class="flex flex-col md:w-[50%] justify-items-start p-4 md:p-2 md:mt-4">
@@ -584,7 +584,7 @@
         function loadImages(images_carrocel, carousel_paisagismo_div) {
             images_carrocel.forEach(image => {
                 const imgElement = document.createElement('img');
-                imgElement.src = image;
+                imgElement.src = `https://rrjardinagem.github.io/rrjardinagem/${image}`;
                 imgElement.classList.add('w-full', 'h-full', 'object-cover','rounded-md','mt-2');
                 carousel_paisagismo_div.appendChild(imgElement);
             });
