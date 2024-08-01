@@ -1,0 +1,16 @@
+.responsive-img {
+    width: 100px;
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .img-fundo{
+    background-image: url('./images/18.png');
+  }
+  
+  /* Define o tamanho da imagem para dispositivos móveis */
+  @media (max-width: 768px) {
+    .responsive-img {
+      width: 100px;
+      height: auto; /* Mantém a proporção da imagem */
+    }
+  }

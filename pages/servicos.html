@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../index.css">
+    <title>RR JARDINAGEM</title>
+</head>
+<script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            colors: {
+                'primary-blue': '#246a38',
+            }
+        }
+        }
+    }
+</script>
+<body>
+
+    <header class="sticky top-0 z-10 text-right flex flex-row w-full bg-primary-blue pl-4 pr-4 pt-4 pb-2">
+        <img  src="/images/logo-white.png" alt="baner" class="responsive-img"/>
+        <div class="flex flex-col md:flex-row ml-auto gap-4 md:gap-8">
+            <a href="/index.html" class="whitespace-nowrap mt-auto text-sx text-white ml-auto hover:opacity-50">Home</a>
+            <div class="flex flex-col md:flex-row ml-auto gap-4 ">
+                <!-- <a href="/login" class="whitespace-nowrap mt-auto text-sx font-bold text-[#075E54] pt-1 pb-1 pl-4 pr-4 text-center rounded-md ml-auto bg-white hover:opacity-80">Já sou cliente</a> -->
+                <a class="whitespace-nowrap flex justify-center items-center gap-2 ml-auto mt-auto hover:opacity-50" href="https://api.whatsapp.com/send/?phone=5511969803152&text=ola">
+                <p class='text-white'>
+                    Fale Conosco
+                </p>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="box_main" class="flex flex-col w-full h-full">
+        <div  class="text-center mt-4">
+            <h6 class="text-[#128C7E]  text-3xl font-bold">Transforme Seu Espaço Verde com a</h6>
+            <h7 class="text-[#128C7E]  text-3xl font-bold">RR Jardinagem</h7>
+        </div>
+
+        <div class="p-4 gap-4 grid grid-cols-1 md:grid-cols-2 mt-8">
+            <div class="bg-[#edf2f5] p-6 rounded-lg border-l-4 border-primary-blue  max-[990px]:p-3">
+                <h5 class="font-bold mt-auto text-[25px]/[1] max-[990px]:text-[15px]/[1]">Manutenção de Jardim</h5>
+                <div class="flex flex-row gap-4 mt-2">
+                    <p class="max-[990px]:text-[9px] text-xs mb-2 ">Mantemos seu jardim sempre saudável e atraente através de técnicas especializadas de corte,
+                        adubação, irrigação e controle de pragas. Nossa equipe realiza inspeções regulares para garantir que todas as plantas estejam crescendo bem e que o solo esteja em ótimas condições.
+                        Cuidamos de cada detalhe para que seu jardim esteja sempre bonito e bem cuidado.
+                    </p>
+                </div>
+
+                <div class="relative w-full h-[40vh] md:h-[70vh] overflow-hidden">
+                    <div id="carousel_manutencao_jardin" class="flex transition-transform duration-500">
+                   
+                    </div>
+                    <button id="prev_manutencao_jardin" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="next_manutencao_jardin" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+                
+            </div>
+
+            <div class=" bg-[#edf2f5] p-6 rounded-lg border-l-4 border-primary-blue  max-[990px]:p-3">
+                <h5 class="font-bold mt-auto text-[25px]/[1] max-[990px]:text-[15px]/[1]">Ajardinamento</h5>
+                <div class="flex flex-row gap-4 mt-2">
+                    <p class="max-[990px]:text-[9px] text-xs mb-2 ">Transformamos espaços abertos em áreas verdes deslumbrantes,
+                         criando jardins novos ou renovando os existentes. Trabalhamos com uma variedade de plantas, flores e arbustos,
+                          adaptando o projeto ao estilo e às necessidades do cliente. Nosso objetivo é criar um ambiente harmonioso e funcional,
+                           que se integra perfeitamente ao espaço.
+                    </p>
+                </div>
+
+                <div class="relative w-full h-[40vh] md:h-[70vh] overflow-hidden">
+                    <div id="carousel_ajardinamento" class="flex transition-transform duration-500">
+                   
+                    </div>
+                    <button id="prev_ajardinamento" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="next_ajardinamento" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-[#edf2f5] p-6 rounded-lg border-l-4 border-primary-blue  max-[990px]:p-3">
+                <h5 class="font-bold mt-auto text-[25px]/[1] max-[990px]:text-[15px]/[1]">Paisagismo</h5>
+                <div class="flex flex-row gap-4 mt-2">
+                    <p class="max-[990px]:text-[9px] text-xs mb-2 ">Desenvolvemos projetos paisagísticos personalizados que valorizam seu imóvel e melhoram a qualidade de vida.
+                         Analisamos o terreno e as condições climáticas para escolher as plantas e elementos decorativos mais adequados. Oferecemos soluções criativas e sustentáveis,
+                        focando na estética e na funcionalidade do espaço.
+                    </p>
+                </div>
+
+                <div class="relative w-full h-[40vh] md:h-[70vh] overflow-hidden">
+                    <div id="carousel_paisagismo" class="flex transition-transform duration-500">
+                   
+                    </div>
+                    <button id="prev_paisagismo" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="next_paisagismo" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+                
+            </div>
+
+            <div class=" bg-[#edf2f5] p-6 rounded-lg border-l-4 border-primary-blue  max-[990px]:p-3">
+                <h5 class="font-bold mt-auto text-[25px]/[1] max-[990px]:text-[15px]/[1]">Limpeza de Terreno</h5>
+                <div class="flex flex-row gap-4 mt-2">
+                    <p class="max-[990px]:text-[9px] text-xs mb-2 ">Preparamos terrenos para novos projetos ou revitalizamos áreas abandonadas,
+                         removendo entulhos, vegetação indesejada e detritos. Utilizamos equipamentos adequados para garantir uma limpeza eficiente e segura.
+                          Este serviço é essencial para a construção de novos jardins, áreas de lazer ou qualquer tipo de projeto paisagístico.
+                </div>
+
+                <div class="relative w-full h-[40vh] md:h-[70vh] overflow-hidden">
+                    <div id="carousel_limpeza_de_terreno" class="flex transition-transform duration-500">
+                   
+                    </div>
+                    <button id="prev_limpeza_de_terreno" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="next_limpeza_de_terreno" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-[#edf2f5] p-6 rounded-lg border-l-4 border-primary-blue  max-[990px]:p-3">
+                <h5 class="font-bold mt-auto text-[25px]/[1] max-[990px]:text-[15px]/[1]">Trilha em Floresta e Parque</h5>
+                <div class="flex flex-row gap-4 mt-2">
+                    <p class="max-[990px]:text-[9px] text-xs mb-2 ">Desenvolvemos trilhas seguras e bem planejadas em áreas naturais,
+                         como florestas e parques. Priorizamos a preservação do ambiente, criando caminhos que respeitam a topografia e a vegetação local.
+                          As trilhas são projetadas para oferecer uma experiência agradável e segura para os usuários, promovendo o contato com a natureza.
+                    </p>
+                </div>
+                <div class="relative w-full h-[40vh] md:h-[70vh] overflow-hidden">
+                    <div id="carousel_trilha" class="flex transition-transform duration-500">
+                   
+                    </div>
+                    <button id="prev_trilha" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="next_trilha" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+                
+            </div>
+
+            <div class=" bg-[#edf2f5] p-6 rounded-lg border-l-4 border-primary-blue  max-[990px]:p-3">
+                <h5 class="font-bold mt-auto text-[25px]/[1] max-[990px]:text-[15px]/[1]">Poda de Árvore</h5>
+                <div class="flex flex-row gap-4 mt-2">
+                    <p class="max-[990px]:text-[9px] text-xs mb-2 ">Transformamos espaços abertos em áreas verdes deslumbrantes,
+                         criando jardins novos ou renovando os existentes. Trabalhamos com uma variedade de plantas, flores e arbustos,
+                          adaptando o projeto ao estilo e às necessidades do cliente. Nosso objetivo é criar um ambiente harmonioso e funcional,
+                           que se integra perfeitamente ao espaço.
+                    </p>
+                </div>
+                <div class="relative w-full h-[40vh] md:h-[70vh] overflow-hidden">
+                    <div id="carousel_poda_de_arvore" class="flex transition-transform duration-500">
+                   
+                    </div>
+                    <button id="prev_poda_de_arvore" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="next_poda_de_arvore" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-[#edf2f5] p-6 rounded-lg border-l-4 border-primary-blue  max-[990px]:p-3">
+                <h5 class="font-bold mt-auto text-[25px]/[1] max-[990px]:text-[15px]/[1]">Aplicação de Herbicida</h5>
+                <div class="flex flex-row gap-4 mt-2">
+                    <p class="max-[990px]:text-[9px] text-xs mb-2 "> Utilizamos herbicidas de alta qualidade para o controle eficaz de ervas daninhas,
+                         protegendo suas plantas e o solo. Aplicamos os produtos de forma segura e precisa, seguindo as normas ambientais.
+                          Este serviço é essencial para manter o jardim limpo e livre de plantas invasoras que competem por nutrientes e espaço.
+                    </p>
+                </div>
+                <div class="relative w-full h-[40vh] md:h-[70vh] overflow-hidden">
+                    <div id="carousel_herbicida_praga" class="flex transition-transform duration-500">
+                   
+                    </div>
+                    <button id="prev_herbicida_praga" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="next_herbicida_praga" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+                
+            </div>
+
+            <div class=" bg-[#edf2f5] p-6 rounded-lg border-l-4 border-primary-blue  max-[990px]:p-3">
+                <h5 class="font-bold mt-auto text-[25px]/[1] max-[990px]:text-[15px]/[1]">Controle de Pragas e Vegetação</h5>
+                <div class="flex flex-row gap-4 mt-2">
+                    <p class="max-[990px]:text-[9px] text-xs mb-2 ">Protegemos seu jardim contra pragas e plantas indesejadas através de métodos eficazes e seguros.
+                         Utilizamos produtos de controle biológico e químico, conforme necessário, para manter o equilíbrio do ecossistema.
+                          Nossa equipe monitora regularmente o jardim para detectar e tratar qualquer problema de forma rápida e eficiente.
+                    </p>
+                </div>
+
+                <div class="relative w-full h-[40vh] md:h-[70vh] overflow-hidden">
+                    <div id="carousel_praga" class="flex transition-transform duration-500">
+                   
+                    </div>
+                    <button id="prev_praga" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="next_praga" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-[#edf2f5] p-6 rounded-lg border-l-4 border-primary-blue  max-[990px]:p-3">
+                <h5 class="font-bold mt-auto text-[25px]/[1] max-[990px]:text-[15px]/[1]">Reflorestamento e Recomposição</h5>
+                <div class="flex flex-row gap-4 mt-2">
+                    <p class="max-[990px]:text-[9px] text-xs mb-2 ">Contribuímos para a sustentabilidade e a recuperação de áreas degradadas através de projetos de reflorestamento e recomposição vegetal.
+                         Selecionamos espécies nativas para plantar, promovendo a biodiversidade e a recuperação do solo.
+                          Este serviço é essencial para restaurar ecossistemas e melhorar a qualidade ambiental.
+                    </p>
+                </div>
+                <div class="relative w-full h-[40vh] md:h-[70vh] overflow-hidden">
+                    <div id="carousel_reflorestamento" class="flex transition-transform duration-500">
+                   
+                    </div>
+                    <button id="prev_reflorestamento" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="next_reflorestamento" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+                
+            </div>
+
+            <div class=" bg-[#edf2f5] p-6 rounded-lg border-l-4 border-primary-blue  max-[990px]:p-3">
+                <h5 class="font-bold mt-auto text-[25px]/[1] max-[990px]:text-[15px]/[1]">Formação de Jardins</h5>
+                <div class="flex flex-row gap-4 mt-2">
+                    <p class="max-[990px]:text-[9px] text-xs mb-2 ">Criamos jardins personalizados que refletem seu estilo e necessidades,
+                         utilizando uma variedade de plantas, flores e elementos decorativos. Planejamos o layout do jardim para otimizar o uso do espaço e garantir a harmonia estética.
+                          Nosso objetivo é criar um ambiente agradável e funcional, que se torna um verdadeiro refúgio para você e sua família.
+                    </p>
+                </div>
+                <div class="relative w-full h-[40vh] md:h-[70vh] overflow-hidden">
+                    <div id="carousel_formaçao_de_jardim" class="flex transition-transform duration-500">
+                   
+                    </div>
+                    <button id="prev_formaçao_de_jardim" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="next_formaçao_de_jardim" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white px-2 py-1 rounded">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        
+
+    </main>
+
+    <footer class="bg-white w-full flex flex-col md:flex-row pb-8 md:gap-20 md:mt-8">
+        <div class="flex flex-col md:w-[50%] md:justify-items-end p-2">
+            <div class="w-fit mr-auto ml-auto md:mr-0 md:ml-auto flex flex-col md:mt-auto md:mb-auto">
+                <img width="300"  src="/images/logo3.png" alt="baner" class="mr-auto" />
+            </div>
+        </div>
+        <div class="flex flex-col md:w-[50%] justify-items-start p-4 md:p-2 md:mt-4">
+            <div class="md:w-[50%] flex flex-col md:mr-auto justify-items-center  md:mt-auto md:mb-auto">
+                <p class="text-[#128C7E]  text-2xl md:mt-8 font-bold">Entre em contato para conversarmos sobre o melhor orçamento</p>
+                    
+                <a  href="https://api.whatsapp.com/send/?phone=5511969803152&text=ola"
+                    class="flex w-[70%] text-center	text-xs font-bold hover:opacity-50 bg-[#DCF8C6] text-[#075E54] py-2 px-4 rounded-2xl mr-auto ml-auto md:ml-0 md:mr-auto mt-4">
+                    <p class="ml-auto mr-auto">FALE COM CONSULTOR</p>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="flex flex-col w-fit ml-auto mr-auto gap-4 mb-4">
+        <p class="text-[#128C7E] font-semi-bold">Siga nossas redes sociais</p>
+        <div class="flex flex-row w-fit ml-auto mr-auto gap-4 mb-4">
+            <a href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook-f mt-1 text-[#075E54]" style="font-size: 20px;"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram text-[#075E54]" style="font-size: 30px;"></i>
+            </a>
+            <a href="https://www.whatsapp.com" target="_blank">
+                <i class="fab fa-whatsapp text-[#075E54]" style="font-size: 30px;"></i>
+            </a>
+
+            <!-- <a href='' class="">Termos de Serviços</a>
+            <a href='' class="">Politicas de Privacidade</a> -->
+        </div>
+    </div>
+
+
+    <script>
+        const images_manutencao_jardin = [
+            '/images/manutencao_de_jardim/manutencao_de_jardim1.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim2.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim3.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim4.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim5.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim6.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim7.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim8.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim9.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim10.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim11.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim12.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim13.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim14.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim15.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim16.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim17.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim18.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim19.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim20.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim21.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim22.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim23.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim24.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim25.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim26.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim27.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim28.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim29.jpg',
+            '/images/manutencao_de_jardim/manutencao_de_jardim30.jpg',
+
+        ]
+
+        const images_ajardinamento = [
+            '/images/ajardinamento/ajardinamento1.jpg',
+            '/images/ajardinamento/ajardinamento2.jpg',
+            '/images/ajardinamento/ajardinamento3.jpg'
+        ]
+
+        const images_paisagismo = [
+            '/images/paisagismo/paisagismo1.jpg',
+            '/images/paisagismo/paisagismo2.jpg',
+            '/images/paisagismo/paisagismo3.jpg',
+            '/images/paisagismo/paisagismo4.jpg',
+            '/images/paisagismo/paisagismo5.jpg',
+            '/images/paisagismo/paisagismo6.jpg',
+            '/images/paisagismo/paisagismo7.jpg',
+            '/images/paisagismo/paisagismo8.jpg',
+            '/images/paisagismo/paisagismo9.jpg',
+            '/images/paisagismo/paisagismo10.jpg',
+            '/images/paisagismo/paisagismo11.jpg',
+            '/images/paisagismo/paisagismo12.jpg',
+            '/images/paisagismo/paisagismo13.jpg',
+            '/images/paisagismo/paisagismo14.jpg',
+            '/images/paisagismo/paisagismo15.jpg',
+            '/images/paisagismo/paisagismo16.jpg',
+            '/images/paisagismo/paisagismo17.jpg',
+            '/images/paisagismo/paisagismo18.jpg',
+            '/images/paisagismo/paisagismo19.jpg',
+            '/images/paisagismo/paisagismo20.jpg',
+            '/images/paisagismo/paisagismo21.jpg',
+            '/images/paisagismo/paisagismo22.jpg',
+            '/images/paisagismo/paisagismo23.jpg',
+            '/images/paisagismo/paisagismo24.jpg',
+            '/images/paisagismo/paisagismo25.jpg',
+            '/images/paisagismo/paisagismo26.jpg',
+            '/images/paisagismo/paisagismo27.jpg',
+        ];
+
+        const images_limpeza_de_terreno =[
+            '/images/limpeza_de_terreno/limpeza_de_terreno1.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno2.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno3.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno4.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno5.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno6.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno7.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno8.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno9.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno10.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno11.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno12.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno13.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno14.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno15.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno16.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno17.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno18.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno19.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno20.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno21.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno22.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno23.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno24.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno25.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno26.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno27.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno28.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno29.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno30.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno31.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno32.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno33.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno34.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno35.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno36.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno37.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno38.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno39.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno40.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno41.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno42.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno43.jpg',
+            '/images/limpeza_de_terreno/limpeza_de_terreno44.jpg',
+                
+        ]
+
+        const images_poda_de_arvore = [
+            '/images/poda_de_arvore/poda_de_arvore1.jpg',
+            '/images/poda_de_arvore/poda_de_arvore2.jpg',
+            '/images/poda_de_arvore/poda_de_arvore3.jpg',
+            '/images/poda_de_arvore/poda_de_arvore4.jpg',
+        ]
+
+        const images_trilha = [
+            '/images/poda_de_arvore/poda_de_arvore1.jpg',
+            '/images/poda_de_arvore/poda_de_arvore2.jpg',
+            '/images/poda_de_arvore/poda_de_arvore3.jpg',
+            '/images/poda_de_arvore/poda_de_arvore4.jpg',
+        ]
+
+        const images_herbicida_praga = [
+            '/images/herbicida_praga/herbicida_praga2.jpeg',
+            '/images/herbicida_praga/herbicida_praga1.jpeg',
+            // '/images/herbicida_praga/herbicida_praga3.jpeg',
+            // '/images/herbicida_praga/herbicida_praga4.jpeg',
+        ]
+
+        const images_praga = [
+            '/images/herbicida_praga/herbicida_praga1.jpeg',
+            '/images/herbicida_praga/herbicida_praga2.jpeg',
+            // '/images/herbicida_praga/herbicida_praga3.jpeg',
+            // '/images/herbicida_praga/herbicida_praga4.jpeg',
+        ]
+
+        const images_reflorestamento = [
+            '/images/reflorestamento/reflorestamento1.jpg',
+            '/images/reflorestamento/reflorestamento2.jpg',
+            '/images/reflorestamento/reflorestamento3.jpg',
+            '/images/reflorestamento/reflorestamento4.jpg',
+            '/images/reflorestamento/reflorestamento5.jpg',
+            '/images/reflorestamento/reflorestamento6.jpg',
+            '/images/reflorestamento/reflorestamento7.jpg',
+            '/images/reflorestamento/reflorestamento8.jpg',
+            '/images/reflorestamento/reflorestamento9.jpg',
+            '/images/reflorestamento/reflorestamento10.jpg',
+            '/images/reflorestamento/reflorestamento11.jpg',
+            '/images/reflorestamento/reflorestamento12.jpg',
+            '/images/reflorestamento/reflorestamento13.jpg',
+            '/images/reflorestamento/reflorestamento14.jpg',
+            '/images/reflorestamento/reflorestamento15.jpg',
+            '/images/reflorestamento/reflorestamento16.jpg',
+            '/images/reflorestamento/reflorestamento17.jpg',
+            '/images/reflorestamento/reflorestamento18.jpg',
+            '/images/reflorestamento/reflorestamento19.jpg',
+            '/images/reflorestamento/reflorestamento20.jpg',
+            '/images/reflorestamento/reflorestamento21.jpg',
+            '/images/reflorestamento/reflorestamento22.jpg',
+            '/images/reflorestamento/reflorestamento23.jpg',
+            '/images/reflorestamento/reflorestamento24.jpg',
+            '/images/reflorestamento/reflorestamento25.jpg',
+            '/images/reflorestamento/reflorestamento26.jpg',
+            '/images/reflorestamento/reflorestamento27.jpg',
+            '/images/reflorestamento/reflorestamento28.jpg',
+            '/images/reflorestamento/reflorestamento29.jpg',
+        ]
+
+        const images_formaçao_de_jardim = [
+            '/images/formaçao_de_jardim/formaçao_de_jardim1.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim2.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim3.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim4.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim5.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim6.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim7.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim8.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim9.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim10.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim11.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim12.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim13.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim14.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim15.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim16.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim17.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim18.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim19.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim20.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim21.jpg',
+            '/images/formaçao_de_jardim/formaçao_de_jardim22.jpg',
+        ]
+        
+        
+        const carousel_manutencao_jardin = document.getElementById('carousel_manutencao_jardin');
+        let currentIndex_manutencao_jardin = 0;
+
+        const carousel_ajardinamento = document.getElementById('carousel_ajardinamento');
+        let currentIndex_ajardinamento = 0;
+
+        const carousel_paisagismo = document.getElementById('carousel_paisagismo');
+        let currentIndex_paisagismo = 0;
+
+        const carousel_limpeza_de_terreno = document.getElementById('carousel_limpeza_de_terreno');
+        let currentIndex_limpeza_de_terreno = 0;
+
+        const carousel_trilha = document.getElementById('carousel_trilha');
+        let currentIndex_trilha = 0;
+
+        const carousel_poda_de_arvore = document.getElementById('carousel_poda_de_arvore');
+        let currentIndex_poda_de_arvore = 0;
+
+        const carousel_herbicida_praga = document.getElementById('carousel_herbicida_praga');
+        let currentIndex_herbicida_praga = 0;
+
+        const carousel_praga = document.getElementById('carousel_praga');
+        let currentIndex_praga = 0;
+
+        const carousel_reflorestamento = document.getElementById('carousel_reflorestamento');
+        let currentIndex_reflorestamento = 0;
+
+        const carousel_formaçao_de_jardim = document.getElementById('carousel_formaçao_de_jardim');
+        let currentIndex_formaçao_de_jardim = 0;
+
+        function loadImages(images_carrocel, carousel_paisagismo_div) {
+            images_carrocel.forEach(image => {
+                const imgElement = document.createElement('img');
+                imgElement.src = image;
+                imgElement.classList.add('w-full', 'h-full', 'object-cover','rounded-md','mt-2');
+                carousel_paisagismo_div.appendChild(imgElement);
+            });
+        }
+
+        function updateCarousel(carousel_paisagismo_div,currentIndex_paisagismo_update) {
+            carousel_paisagismo_div.style.transform = `translateX(-${currentIndex_paisagismo_update * 100}%)`;
+        }
+
+
+        document.getElementById('prev_paisagismo').addEventListener('click', () => {
+            currentIndex_paisagismo = (currentIndex_paisagismo > 0) ? currentIndex_paisagismo - 1 : images_paisagismo.length - 1;
+            updateCarousel(carousel_paisagismo,currentIndex_paisagismo);
+        });
+
+        document.getElementById('next_paisagismo').addEventListener('click', () => {
+            currentIndex_paisagismo = (currentIndex_paisagismo < images_paisagismo.length - 1) ? currentIndex_paisagismo + 1 : 0;
+            updateCarousel(carousel_paisagismo,currentIndex_paisagismo);
+        });
+
+        document.getElementById('prev_manutencao_jardin').addEventListener('click', () => {
+            currentIndex_manutencao_jardin = (currentIndex_manutencao_jardin > 0) ? currentIndex_manutencao_jardin - 1 : images_manutencao_jardin.length - 1;
+            updateCarousel(carousel_manutencao_jardin,currentIndex_manutencao_jardin);
+        });
+
+        document.getElementById('next_manutencao_jardin').addEventListener('click', () => {
+            currentIndex_manutencao_jardin = (currentIndex_manutencao_jardin < images_manutencao_jardin.length - 1) ? currentIndex_manutencao_jardin + 1 : 0;
+            updateCarousel(carousel_manutencao_jardin,currentIndex_manutencao_jardin);
+        });
+
+        document.getElementById('prev_ajardinamento').addEventListener('click', () => {
+            currentIndex_ajardinamento = (currentIndex_ajardinamento > 0) ? currentIndex_ajardinamento - 1 : images_ajardinamento.length - 1;
+            updateCarousel(carousel_ajardinamento,currentIndex_ajardinamento);
+        });
+
+        document.getElementById('next_ajardinamento').addEventListener('click', () => {
+            currentIndex_ajardinamento = (currentIndex_ajardinamento < images_ajardinamento.length - 1) ? currentIndex_ajardinamento + 1 : 0;
+            updateCarousel(carousel_ajardinamento,currentIndex_ajardinamento);
+        });
+
+        document.getElementById('prev_limpeza_de_terreno').addEventListener('click', () => {
+            currentIndex_limpeza_de_terreno = (currentIndex_limpeza_de_terreno > 0) ? currentIndex_limpeza_de_terreno - 1 : images_limpeza_de_terreno.length - 1;
+            updateCarousel(carousel_limpeza_de_terreno,currentIndex_limpeza_de_terreno);
+        });
+
+        document.getElementById('next_limpeza_de_terreno').addEventListener('click', () => {
+            currentIndex_limpeza_de_terreno = (currentIndex_limpeza_de_terreno < images_limpeza_de_terreno.length - 1) ? currentIndex_limpeza_de_terreno + 1 : 0;
+            updateCarousel(carousel_limpeza_de_terreno,currentIndex_limpeza_de_terreno);
+        });
+        
+        document.getElementById('prev_trilha').addEventListener('click', () => {
+            currentIndex_trilha = (currentIndex_trilha > 0) ? currentIndex_trilha - 1 : images_trilha.length - 1;
+            updateCarousel(carousel_trilha,currentIndex_trilha);
+        });
+
+        document.getElementById('next_trilha').addEventListener('click', () => {
+            currentIndex_trilha = (currentIndex_trilha < images_trilha.length - 1) ? currentIndex_trilha + 1 : 0;
+            updateCarousel(carousel_trilha,currentIndex_trilha);
+        });
+       
+        document.getElementById('prev_poda_de_arvore').addEventListener('click', () => {
+            currentIndex_poda_de_arvore = (currentIndex_poda_de_arvore > 0) ? currentIndex_poda_de_arvore - 1 : images_poda_de_arvore.length - 1;
+            updateCarousel(carousel_poda_de_arvore,currentIndex_poda_de_arvore);
+        });
+
+        document.getElementById('next_poda_de_arvore').addEventListener('click', () => {
+            currentIndex_poda_de_arvore = (currentIndex_poda_de_arvore < images_poda_de_arvore.length - 1) ? currentIndex_poda_de_arvore + 1 : 0;
+            updateCarousel(carousel_poda_de_arvore,currentIndex_poda_de_arvore);
+        });
+
+        document.getElementById('prev_herbicida_praga').addEventListener('click', () => {
+            currentIndex_herbicida_praga = (currentIndex_herbicida_praga > 0) ? currentIndex_herbicida_praga - 1 : images_herbicida_praga.length - 1;
+            updateCarousel(carousel_herbicida_praga,currentIndex_herbicida_praga);
+        });
+
+        document.getElementById('next_herbicida_praga').addEventListener('click', () => {
+            currentIndex_herbicida_praga = (currentIndex_herbicida_praga < images_herbicida_praga.length - 1) ? currentIndex_herbicida_praga + 1 : 0;
+            updateCarousel(carousel_herbicida_praga,currentIndex_herbicida_praga);
+        });
+
+        document.getElementById('prev_praga').addEventListener('click', () => {
+            currentIndex_praga = (currentIndex_praga > 0) ? currentIndex_praga - 1 : images_praga.length - 1;
+            updateCarousel(carousel_praga,currentIndex_praga);
+        });
+
+        document.getElementById('next_praga').addEventListener('click', () => {
+            currentIndex_praga = (currentIndex_praga < images_praga.length - 1) ? currentIndex_praga + 1 : 0;
+            updateCarousel(carousel_praga,currentIndex_praga);
+        });
+
+
+        document.getElementById('prev_reflorestamento').addEventListener('click', () => {
+            currentIndex_reflorestamento = (currentIndex_reflorestamento > 0) ? currentIndex_reflorestamento - 1 : images_reflorestamento.length - 1;
+            updateCarousel(carousel_reflorestamento,currentIndex_reflorestamento);
+        });
+
+        document.getElementById('next_reflorestamento').addEventListener('click', () => {
+            currentIndex_reflorestamento = (currentIndex_reflorestamento < images_reflorestamento.length - 1) ? currentIndex_reflorestamento + 1 : 0;
+            updateCarousel(carousel_reflorestamento,currentIndex_reflorestamento);
+        });
+
+        document.getElementById('prev_formaçao_de_jardim').addEventListener('click', () => {
+            currentIndex_formaçao_de_jardim = (currentIndex_formaçao_de_jardim > 0) ? currentIndex_formaçao_de_jardim - 1 : images_formaçao_de_jardim.length - 1;
+            updateCarousel(carousel_formaçao_de_jardim,currentIndex_formaçao_de_jardim);
+        });
+
+        document.getElementById('next_formaçao_de_jardim').addEventListener('click', () => {
+            currentIndex_formaçao_de_jardim = (currentIndex_formaçao_de_jardim < images_formaçao_de_jardim.length - 1) ? currentIndex_formaçao_de_jardim + 1 : 0;
+            updateCarousel(carousel_formaçao_de_jardim,currentIndex_formaçao_de_jardim);
+        });
+
+
+        loadImages(images_formaçao_de_jardim,carousel_formaçao_de_jardim);
+
+        loadImages(images_reflorestamento,carousel_reflorestamento);
+
+        loadImages(images_praga,carousel_praga);
+
+        loadImages(images_herbicida_praga,carousel_herbicida_praga);
+       
+        loadImages(images_poda_de_arvore,carousel_poda_de_arvore);
+
+        loadImages(images_trilha,carousel_trilha);
+
+        loadImages(images_limpeza_de_terreno,carousel_limpeza_de_terreno);
+
+        loadImages(images_ajardinamento,carousel_ajardinamento);
+
+        loadImages(images_manutencao_jardin,carousel_manutencao_jardin);
+
+        loadImages(images_paisagismo,carousel_paisagismo);
+        
+    </script>
+    
+</body>
+</html>
